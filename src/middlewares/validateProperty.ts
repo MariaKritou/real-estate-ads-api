@@ -1,6 +1,6 @@
-import { Request, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 
-const validateProperty = (req: Request, res: Response) => {
+const validateProperty = (req: Request, res: Response, next: NextFunction) => {
     const { title, type, area, price } = req.body;
 
     const errors = [];
@@ -18,6 +18,8 @@ const validateProperty = (req: Request, res: Response) => {
     if (errors.length > 0) {
         return res.status(400).json({ message: 'Validation Error', errors });
     }
+
+    next();
 }
 
 export default validateProperty;
