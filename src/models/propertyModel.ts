@@ -1,20 +1,5 @@
 import mongoose, { Document, Schema } from "mongoose";
-
-type AdvertisementType = 'rent' | 'buy' | 'donation' | 'exchange';
-
-interface PriceDetails {
-    amount: number;
-    isNegotiable: boolean;
-}
-
-interface IProperty extends Document {
-    title: string;
-    type: AdvertisementType;
-    area: string;
-    priceDetails: PriceDetails;
-    description?: string;
-    availableFrom?: Date;
-}
+import { IProperty } from "../types/propertyTypes";
 
 const PropertySchema: Schema = new Schema({
     title: { type: String, required: true, maxlength: 155 },
