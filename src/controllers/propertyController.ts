@@ -14,6 +14,7 @@ const createProperty = async (req: Request, res: Response) => {
 const getLocationSuggestions = async (req: Request, res: Response) => {
     try {
         const searchQuery = req.query.search;
+
         if(typeof searchQuery !== 'string') {
             return res.status(400).json({message: 'Invalid search query'})
         }
