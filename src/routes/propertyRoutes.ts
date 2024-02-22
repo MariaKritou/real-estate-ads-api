@@ -4,6 +4,7 @@ import validateProperty from '../middlewares/validateProperty';
 
 const propertyRoutes = express.Router();
 
+propertyRoutes.get('/properties', propertyController.getAllProperties)
 propertyRoutes.post('/properties', validateProperty, propertyController.createProperty)
 propertyRoutes.get('/properties/locations', propertyController.getLocationSuggestions)
 

@@ -1,18 +1,19 @@
 import { NextFunction, Request, Response } from "express";
 
 const validateProperty = (req: Request, res: Response, next: NextFunction) => {
-    const { title, type, area, price } = req.body;
+    const { title, type, area, priceDetails } = req.body;
+    console.log("createProperty2", req.body);
 
     const errors = [];
 
     if (!title) errors.push('Title is required!');
     if (!type) errors.push('Type is required!');
     if (!area) errors.push('Area is required!');
-    if (price === undefined || price === null) {
+    if (priceDetails === undefined || priceDetails === null) {
         errors.push('Price is required!');
     } else {
-        if (typeof price.amount !== 'number') errors.push('Price must be a number!');
-        if (typeof price.isNegotiable !== 'boolean') errors.push('Price isNegotiable must be a boolean.');
+        if (typeof priceDetails.amount !== 'number') errors.push('Price must be a number!');
+        if (typeof priceDetails.isNegotiable !== 'boolean') errors.push('Price isNegotiable must be a boolean.');
     }
 
     if (errors.length > 0) {
