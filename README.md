@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Node.js application is designed to manage real estate properties' ads, allowing users to view and create properties. It leverages technologies such as Express for the server framework, MongoDB for data storage, and Node-Cache for caching the autocomplete results.
+This Node.js (used with Typescript for type safety) application is designed to manage real estate properties' ads, allowing users to view and create properties. It leverages technologies such as Express for the server framework, MongoDB for data storage, and Node-Cache for caching the autocomplete results.
 
 ## Prerequisites
 
