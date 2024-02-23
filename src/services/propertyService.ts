@@ -2,27 +2,27 @@ import PropertyModel from "../models/propertyModel";
 import { IProperty } from "../types/propertyTypes";
 
 const getAllProperties = async () => {
-    try {
-      const properties = await PropertyModel.find({});
-      return properties;
-    } catch (error) {
-      console.error("Error fetching properties:", error);
-      throw new Error('Failed to fetch properties.');
-    }
-  };
-  
+  try {
+    const properties = await PropertyModel.find({});
+    return properties;
+  } catch (error) {
+    console.error("Error fetching properties:", error);
+    throw new Error('Failed to fetch properties.');
+  }
+};
+
 export const createProperty = async (propertyData: IProperty) => {
-
-    console.log('ff', propertyData)
+  try {
     const property = new PropertyModel(propertyData);
-    console.log('ff', property)
-
     await property.save();
-
     return property;
+  } catch (error) {
+    console.error("Error saving property:", error);
+    throw new Error('Failed to save property.');
+  }
 }
 
 export default {
-    getAllProperties,
-    createProperty,
+  getAllProperties,
+  createProperty,
 }

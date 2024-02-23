@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from "express";
 
 const validateProperty = (req: Request, res: Response, next: NextFunction) => {
     const { title, type, area, priceDetails } = req.body;
-    console.log("createProperty2", req.body);
 
     const errors = [];
 
