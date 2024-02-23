@@ -25,4 +25,4 @@ To set up the project locally, follow these steps:
 - If you face any issues with connecting to the db you can contact me 
 - I wanted to create unit tests but unfortunately due to my schedule and time limitation I could not continue, I created a new branch called "testing" in which I will continue testing the application, you can check it out-it will propably have a lot of failed tests, the main branch will remain unchanged.
 
-
+:)
