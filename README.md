@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed on your system:
 
 To set up the project locally, follow these steps:
 
-- Clone the project : https://github.com/MariaKritou/real-estate-ads-api.git
+- Clone the project from the main branch: https://github.com/MariaKritou/real-estate-ads-api.git
 - npm install
 - Create an .env file (or rename the env.example) at the root of the project and paste the mongo uri : MONGO_URI=mongodb+srv://publicUser:fTc8bvKBSw5wCCnd@real-estate-ads.ig9c6q7.mongodb.net/?retryWrites=true&w=majority
 - npm start (localhost:3000 this is used from the API_URL in the frontend as well)
